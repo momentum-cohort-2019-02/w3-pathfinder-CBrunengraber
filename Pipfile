@@ -8,7 +8,7 @@ pillow = "*"
 
 
 [dev-packages]
-"flake8" = "*"
+
 yapf = "*"
 
 [requires]
