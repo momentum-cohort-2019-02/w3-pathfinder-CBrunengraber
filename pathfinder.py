@@ -6,6 +6,9 @@
         ### you will need to import from PIL
         ### Resources: use python for beginners, realpython.com, importpython.com, pycoder.com,
 from PIL import Image, ImageColor, ImageDraw  
+import sys
+x = 0
+y = 0
 
 
 class Map:
@@ -13,11 +16,42 @@ class Map:
     Reads text file of map, and puts into multistring form. Shows elevation by color in image file.
     """
     def __init__(self):
+        # self.elevations = elevations
         
         with open('elevation_small.txt') as file:
             elevations = [line.split() for line in file]
             elevations = [[int(elevation) for elevation in row] for row in elevations]
             # print(elevations)
+# elevations = [0]
+# max(max(x) for x in elevations)
+
+# Python 3 code to find max element  
+# in a matrix 
+  
+# Function to find max element 
+# mat[][] : 2D array to find max element 
+def findMax(elements): 
+      
+    # Initializing max element as INT_MIN 
+    maxElement = -sys.maxsize - 1
+  
+    # checking each element of matrix 
+    # if it is greater than maxElement, 
+    # update maxElement 
+    for i in range(x): 
+        for j in range(y): 
+            if (elevations[i][j] > maxElement): 
+                maxElement = elevations[i][j] 
+          
+    # finally return maxElement 
+    return maxElement 
+  
+# Driver code 
+if __name__ == '__main__': 
+      
+    # matrix 
+    elevations = [0] 
+    print(findMax(elevations)) 
 
 
 
